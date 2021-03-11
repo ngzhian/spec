@@ -1,7 +1,7 @@
 language: python
 python:
   - "3.7"
-dist: bionic
+dist: focal
 
 addons:
   apt:
@@ -11,12 +11,13 @@ addons:
         key_url: 'https://dl.yarnpkg.com/debian/pubkey.gpg'
     update: true
     packages:
+      - ocaml
       - opam
       - texlive-full
       - yarn
 
 install:
-  - opam init --auto-setup --compiler=4.07.1
+  - opam init --auto-setup
   - eval $(opam env)
   - opam --version
   - ocaml --version
