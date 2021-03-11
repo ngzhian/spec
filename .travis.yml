@@ -6,7 +6,6 @@ dist: focal
 addons:
   apt:
     sources:
-      - sourceline: 'ppa:avsm/ppa'
       - sourceline: 'deb https://dl.yarnpkg.com/debian/ stable main'
         key_url: 'https://dl.yarnpkg.com/debian/pubkey.gpg'
     update: true
